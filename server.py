@@ -60,9 +60,13 @@ class ImageResizer:
         image = response['body']['image']
         image.save('im_server/pil_{}.jpg'.format(key))
         print(f'Get request: key={key}, imagepath: images/pil_{key}.jpg, with size: {image.size}')
-        return web.FileResponse(Path(f'images/pil_{key}.jpg'))
-        # return web.FileResponse(path=response['body']['image'])
-        # return web.Response(content_type='image/gif', body=response)
+        resp = web.FileResponse(f'im_server/pil_{key}.jpg')
+
+        return resp
+        # resp = web.StreamResponse(status=200)
+        # await resp.prepare(request)
+        # await resp.write(image.tobytes())
+        # return resp
 
 
 async def json_view(requset):

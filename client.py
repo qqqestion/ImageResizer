@@ -36,10 +36,10 @@ async def get_img(url):
         resp  = await session.get(url.format(key))
         # print(response.data())
 
-        # image = Image.open(BytesIO(await response.read()))
-        async with resp:
-            image = Image.open(BytesIO(await resp.read()))
-        # print(response.__dict__)
+        # print(resp.__dict__)
+        image = Image.open(BytesIO(await resp.read()))
+        # async with resp:
+        #     image = Image.open(BytesIO(await resp.read()))
         image.save(f'im_client/pil_{key}.jpg')
         print(f'Image pil_{key}.jpg saved with size: {image.size}')
 
@@ -54,7 +54,7 @@ async def many_runs(n):
 
 if __name__ == '__main__':
     t = perf_counter()
-    asyncio.run(many_runs(1))
+    asyncio.run(many_runs(2))
     # asyncio.run(one_run())
     total = perf_counter() - t
     print(f'Total time taken: {total} seconds')
