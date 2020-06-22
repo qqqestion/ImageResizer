@@ -1,6 +1,8 @@
 from aiohttp import web
 from PIL import Image
 from io import BytesIO
+from collections import deque
+from pathlib import Path
 
 
 routes = web.RouteTableDef()
@@ -24,22 +26,43 @@ class ImageResizer:
 
     def __init__(self):
         self.total_image_count = 0
+        self.tasks = deque()
 
     async def resize_image(self, image, wh):
+        print(f'Resizing image to size: {wh}')
         return image.resize(wh)
     
-    async def resize_view(self, request):
+    async def post_view(self, request):
         data = await request.post()
         img = data.get('img').file
         height, width = int(data.get('height')), int(data.get('width'))
+        print('Post request. Size: {}'.format((width, height)))
 
         image = Image.open(BytesIO(img.read()))
-        image = await self.resize_image(image, (width, height))
-        image.save('images/pil_{}.jpg'.format(self.total_image_count))
-
-        self.total_image_count += 1
-        print(f'Resizing image to size {height}, {width}')
-        return web.Response(text=f'Image was resized to ({height}, {width})')
+        self.tasks.append(self.resize_image(image, (width, height)))
+        print(f'Key {len(self.tasks) - 1} added')
+        response = {
+            'key': len(self.tasks) - 1,
+            'status': 'ok',
+        }
+        return web.json_response(response)
+    
+    async def get_view(self, request):
+        key = request.rel_url.query.get('key', '')
+        print(f'Get request: key={key}')
+        response = {
+            'key': key,
+            'status': 'ok',
+            'body': {
+                'image': await self.tasks[int(key)]
+            }
+        }
+        image = response['body']['image']
+        image.save('im_server/pil_{}.jpg'.format(key))
+        print(f'Get request: key={key}, imagepath: images/pil_{key}.jpg, with size: {image.size}')
+        return web.FileResponse(Path(f'images/pil_{key}.jpg'))
+        # return web.FileResponse(path=response['body']['image'])
+        # return web.Response(content_type='image/gif', body=response)
 
 
 async def json_view(requset):
@@ -53,10 +76,12 @@ async def json_view(requset):
     return web.json_response(data)
 
 async def initialization():
+    print('Starting app')
     app = web.Application()
     resizer = ImageResizer()
     app.add_routes([
-        web.post('/resize', resizer.resize_view),
+        web.post('/resize', resizer.post_view),
+        web.get('/get_img', resizer.get_view),
         web.get('/json/{key}', json_view)
     ])
     for name, resource in app.router.named_resources().items():

@@ -1,0 +1,4 @@
+Pillow==7.1.2
+aiohttp==3.6.2
+pytest-aiohttp==0.3.0
+asyncio==3.4.3
