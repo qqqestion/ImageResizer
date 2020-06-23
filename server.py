@@ -1,95 +1,87 @@
 from aiohttp import web
+import asyncio
 from PIL import Image
 from io import BytesIO
-from collections import deque
 from pathlib import Path
+import mimetypes
+from datetime import datetime
+from time import time
 
+from logger import FileLogger
 
-routes = web.RouteTableDef()
-
-async def handler(request):
-    return web.Response(text='Async Server in Python 3.8')
-
-# async def add_lang(request):
-#     data = await request.post()
-#     img = data.get('img').file
-#     height, width = int(data.get('height')), int(data.get('width'))
-#     image = Image.open(BytesIO(img.read()))
-#     image = await resize_image(image, (width, height))
-#     image.save('new_img_pil.jpg')
-
-#     # print(img)
-#     print(f'Resizing image to size {height}, {width}')
-#     return web.Response(text=f'Image was resized to ({height}, {width})')
 
 class ImageResizer:
 
-    def __init__(self):
+    def __init__(self, logger=None):
         self.total_image_count = 0
-        self.tasks = deque()
+        self.tasks = []
+        self.logger = logger or FileLogger()
+        self.logger.log(f'Server started: {datetime.now()}')
 
     async def resize_image(self, image, wh):
-        print(f'Resizing image to size: {wh}')
         return image.resize(wh)
     
     async def post_view(self, request):
         data = await request.post()
-        img = data.get('img').file
-        height, width = int(data.get('height')), int(data.get('width'))
-        print('Post request. Size: {}'.format((width, height)))
+        self.logger.log(f'Got post request from {request.remote}')
+        file_type = mimetypes.guess_type(data.get('img').filename)[0]
+        if file_type not in ['image/png', 'image/jpeg']:
+            self.logger.log(f'Request from {request.remote} fails: not allowed image extension')
+            return web.json_response({'status': 'denied', 'error': 'not allowed image extension'}, status=400)
 
+        img = data.get('img').file
+        try: 
+            height, width = int(data.get('height')), int(data.get('width'))
+        except ValueError:
+            self.logger.log(f'Request from {request.remote} fails: height or width is not integer value')
+            return web.json_response({'status': 'denied', 'error': 'height or width is not integer value'}, status=400)
+
+        if height <= 0 or width <= 0:
+            self.logger.log(f'Request from {request.remote} fails: height or width is not natural numbers')
+            return web.json_response({'status': 'denied', 'error': 'height or width is not natural numbers'}, status=400)
+        
+        self.logger.log('Post request. Size: {}'.format((width, height)))
+        
+        # self.logger.log(f'Post request')
         image = Image.open(BytesIO(img.read()))
-        self.tasks.append(self.resize_image(image, (width, height)))
-        print(f'Key {len(self.tasks) - 1} added')
+        self.tasks.append(
+            asyncio.create_task(self.resize_image(image, (width, height)))
+        )
+        key = len(self.tasks) - 1
+        self.logger.log(f'For request from {request.remote} key {key} added')
         response = {
-            'key': len(self.tasks) - 1,
+            'key': key,
             'status': 'ok',
         }
         return web.json_response(response)
     
     async def get_view(self, request):
         key = request.rel_url.query.get('key', '')
-        print(f'Get request: key={key}')
-        response = {
-            'key': key,
-            'status': 'ok',
-            'body': {
-                'image': await self.tasks[int(key)]
-            }
-        }
-        image = response['body']['image']
-        image.save('im_server/pil_{}.jpg'.format(key))
-        print(f'Get request: key={key}, imagepath: images/pil_{key}.jpg, with size: {image.size}')
-        resp = web.FileResponse(f'im_server/pil_{key}.jpg')
+        self.logger.log(f'Get request from {request.remote}: key={key}')
+        try:
+            task = self.tasks[int(key)]
+        except IndexError:
+            self.logger.log(f'Get request from {request.remote} and key={key} fails: key does not exist')
+            return web.json_response({'status': 'denied', 'error': 'key does not exist'}, status=404)
+        if task.done():
+            image = await task
+            image.save('im_server/pil_{}.jpg'.format(key))
+            self.logger.log(f'Get request from {request.remote}: key={key}, imagepath: images/pil_{key}.jpg, with size: {image.size}')
+            resp = web.FileResponse(f'im_server/pil_{key}.jpg')
+        else:
+            self.logger.log(f'Get request from {request.remote}: key={key}, image in process')
+            resp = web.json_response({'key': key, 'status': 'in process'})
 
         return resp
-        # resp = web.StreamResponse(status=200)
-        # await resp.prepare(request)
-        # await resp.write(image.tobytes())
-        # return resp
 
-
-async def json_view(requset):
-    data = {
-        'key': 'key',
-        'status': 'ok',
-        'body': {
-            'hello': 'world',
-        }
-    }
-    return web.json_response(data)
 
 async def initialization():
-    print('Starting app')
     app = web.Application()
     resizer = ImageResizer()
     app.add_routes([
         web.post('/resize', resizer.post_view),
         web.get('/get_img', resizer.get_view),
-        web.get('/json/{key}', json_view)
     ])
-    for name, resource in app.router.named_resources().items():
-        print(name, resource)
     return app
 
 web.run_app(initialization())

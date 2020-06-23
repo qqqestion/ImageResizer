@@ -17,12 +17,13 @@ async def post_img(url):
     async with aiohttp.ClientSession() as session:
         height, width = randint(400, 1000), randint(600, 1400)
         data = {
-            'img': open('im_client/origin.jpg', 'rb'),
-            'height': str(height),
+            'img': open('im_client/jpeg.jpg', 'rb'),
+            'height': str(-1),
             'width': str(width),
         }
-        post_data  = await session.post(url, data=data)
-        data = json.loads(await post_data.text())
+        resp  = await session.post(url, data=data)
+        print(f'Response status is {resp.status}')
+        data = json.loads(await resp.text())
         print('Image sent. Image key is {}. New size is: {}'.format(data['key'], (width, height)))
         keys.append(data['key'])
 
@@ -33,15 +34,17 @@ async def get_img(url):
         current_key += 1
         print(f'Key is {key}')
         print(f'Waiting for get requset with key: {key}')
-        resp  = await session.get(url.format(key))
-        # print(response.data())
-
-        # print(resp.__dict__)
-        image = Image.open(BytesIO(await resp.read()))
-        # async with resp:
-        #     image = Image.open(BytesIO(await resp.read()))
-        image.save(f'im_client/pil_{key}.jpg')
-        print(f'Image pil_{key}.jpg saved with size: {image.size}')
+        resp = await session.get(url.format(key))
+        print(f'Response status is {resp.status}')
+        if resp.content_type == 'application/json':
+            data = json.loads(await resp.text())
+            print('Image with key[{}] is {}'.format(data['key'], data['status']))
+        elif resp.content_type == 'image/jpeg':
+            image = Image.open(BytesIO(await resp.read()))
+            image.save(f'im_client/pil_{key}.jpg')
+            print(f'Image pil_{key}.jpg saved with size: {image.size}')
+        else:
+            print(f'Unknown content-type: {resp.content_type}')
 
 async def many_runs(n):
     print(f'Run {n} requests')
@@ -54,7 +57,7 @@ async def many_runs(n):
 
 if __name__ == '__main__':
     t = perf_counter()
-    asyncio.run(many_runs(2))
+    asyncio.run(many_runs(1))
     # asyncio.run(one_run())
     total = perf_counter() - t
     print(f'Total time taken: {total} seconds')
