@@ -17,7 +17,7 @@ class ImageResizer:
         self.request_count = 0
         self.tasks = {}
         self.logger = logger or FileLogger()
-        self.logger.log(f'Server started: {datetime.now()}')
+        self.logger.log('--------------Server started--------------')
 
     async def resize_image(self, image, wh):
         return image.resize(wh)
@@ -45,7 +45,7 @@ class ImageResizer:
         return image, file_extension, width, height
     
     @template('main.html')
-    async def post_view(self, request):
+    async def upload_image(self, request):
         if request.method == 'GET':
             return {}
         try:
@@ -71,7 +71,7 @@ class ImageResizer:
         return {'status': 'ok', 'key': key}
     
     @template('get_image.html')
-    async def get_view(self, request):
+    async def get_image(self, request):
         key = request.match_info.get('key', '')
         self.logger.log(f'Get request from {request.remote}: key={key}')
         try:
@@ -103,9 +103,9 @@ async def initialization():
     )
     resizer = ImageResizer()
     app.add_routes([
-        web.get('/resize', resizer.post_view),
-        web.post('/resize', resizer.post_view),
-        web.get('/get_img/{key}', resizer.get_view),
+        web.get('/resize', resizer.upload_image),
+        web.post('/resize', resizer.upload_image),
+        web.get('/get_img/{key}', resizer.get_image),
     ])
     return app
 
