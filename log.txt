@@ -1,0 +1,373 @@
+Server started: 2020-06-23 21:44:13.921263
+Server started: 2020-06-23 21:45:31.331429
+Initialization completed
+Post request. Size: (1315, 890)
+Key 0 added
+Server started: 2020-06-23 21:50:47.572544
+Initialization completed
+Got post request from 127.0.0.1
+Post request. Size: (605, 850)
+For request from 127.0.0.1 key 0 added
+Get request from 127.0.0.1: key=0
+Get request from 127.0.0.1: key=0, imagepath: images/pil_0.jpg, with size: (605, 850)
+Got post request from 127.0.0.1
+Request from 127.0.0.1 fails: height or width is not natural numbers
+Got post request from 127.0.0.1
+Request from 127.0.0.1 fails: height or width is not integer value
+Server started: 2020-06-23 22:06:11.026114
+Server started: 2020-06-23 22:14:09.417725
+Server started: 2020-06-23 22:14:25.804925
+Server started: 2020-06-23 22:16:27.096445
+Server started: 2020-06-23 22:16:37.466632
+Server started: 2020-06-23 22:17:23.305139
+Server started: 2020-06-23 22:17:42.698958
+Server started: 2020-06-23 22:53:37.314950
+Got post request from 127.0.0.1
+Post request. Size: (1094, 857)
+For request from 127.0.0.1 key 0 added
+Get request from 127.0.0.1: key=0
+Get request from 127.0.0.1: key=0, imagepath: images/pil_0.jpg, with size: (1094, 857)
+Server started: 2020-06-23 23:11:25.796515
+Got post request from 127.0.0.1
+Post request. Size: (768, 492)
+For request from 127.0.0.1 key 0 added
+Get request from 127.0.0.1: key=0
+Get request from 127.0.0.1: key=0, imagepath: images/pil_0.jpg, with size: (768, 492)
+Server started: 2020-06-23 23:15:36.340308
+Get request from 127.0.0.1: key=24
+Get request from 127.0.0.1 and key=24 fails: key does not exist
+Got post request from 127.0.0.1
+Post request. Size: (1208, 781)
+For request from 127.0.0.1 key 0 added
+Get request from 127.0.0.1: key=0
+Get request from 127.0.0.1: key=0, imagepath: images/pil_0.jpg, with size: (1208, 781)
+Server started: 2020-06-23 23:17:29.337458
+Got post request from 127.0.0.1
+Post request. Size: (747, 488)
+For request from 127.0.0.1 key 0 added
+Get request from 127.0.0.1: key=0
+Get request from 127.0.0.1: key=0, imagepath: images/pil_0.jpg, with size: (747, 488)
+Got post request from 127.0.0.1
+Request from 127.0.0.1 fails: height or width is not natural numbers
+Server started: 2020-06-24 11:40:24.862252
+Server started: 2020-06-24 11:42:45.024910
+Got post request from 127.0.0.1
+Server started: 2020-06-24 11:47:27.890280
+Got post request from 127.0.0.1
+Server started: 2020-06-24 11:47:46.965517
+Got post request from 127.0.0.1
+Server started: 2020-06-24 11:48:31.077970
+Got post request from 127.0.0.1
+Post request. Size: (750, 552)
+For request from 127.0.0.1 key 0 added
+Get request from 127.0.0.1: key=0
+Get request from 127.0.0.1: key=0, imagepath: images/pil_0.jpg, with size: (750, 552)
+Server started: 2020-06-24 11:48:51.307509
+Got post request from 127.0.0.1
+Post request. Size: (605, 444)
+For request from 127.0.0.1 key 0 added
+Get request from 127.0.0.1: key=0
+Get request from 127.0.0.1: key=0, imagepath: images/pil_0.jpg, with size: (605, 444)
+Server started: 2020-06-24 11:49:15.549494
+Got post request from 127.0.0.1
+Post request. Size: (855, 899)
+For request from 127.0.0.1 key 0 added
+Get request from 127.0.0.1: key=0
+Get request from 127.0.0.1: key=0, imagepath: images/pil_0.jpg, with size: (855, 899)
+Server started: 2020-06-24 11:50:55.159566
+Got post request from 127.0.0.1
+Server started: 2020-06-24 11:52:20.480335
+Got post request from 127.0.0.1
+Server started: 2020-06-24 11:52:39.315291
+Got post request from 127.0.0.1
+Server started: 2020-06-24 11:53:08.294977
+Got post request from 127.0.0.1
+2020-06-24 11:54:12.856560: Server started: 2020-06-24 11:54:12.856470
+2020-06-24 11:54:16.708580: Got post request from 127.0.0.1
+2020-06-24 11:54:53.423390: Server started: 2020-06-24 11:54:53.423264
+2020-06-24 11:54:55.715444: Got post request from 127.0.0.1
+2020-06-24 11:55:23.836070: Server started: 2020-06-24 11:55:23.835953
+2020-06-24 11:55:26.024664: Got post request from 127.0.0.1
+2020-06-24 11:55:49.493399: Server started: 2020-06-24 11:55:49.493273
+2020-06-24 11:55:51.655995: Got post request from 127.0.0.1
+2020-06-24 11:56:14.055151: Server started: 2020-06-24 11:56:14.055031
+2020-06-24 11:56:16.167517: Got post request from 127.0.0.1
+2020-06-24 11:56:47.500687: Server started: 2020-06-24 11:56:47.500556
+2020-06-24 11:56:49.357653: Got post request from 127.0.0.1
+2020-06-24 11:56:49.358042: RuntimeError('Request from 127.0.0.1 fails: height or width is not natural numbers')
+2020-06-24 11:58:40.215924: Server started: 2020-06-24 11:58:40.215807
+2020-06-24 11:58:42.426660: Got post request from 127.0.0.1
+2020-06-24 11:58:42.427136: RuntimeError('Request from 127.0.0.1 fails: height or width is not natural numbers')
+2020-06-24 12:00:23.348417: Server started: 2020-06-24 12:00:23.348296
+2020-06-24 12:00:25.697558: Got post request from 127.0.0.1
+2020-06-24 12:00:25.698096: RuntimeError('Request from 127.0.0.1 fails: not allowed image extension')
+2020-06-24 12:14:47.575448: Server started: 2020-06-24 12:14:47.575357
+2020-06-24 12:14:49.996415: Got post request from 127.0.0.1
+2020-06-24 12:14:49.996833: Request from 127.0.0.1 fails: RuntimeError('height or width is not natural numbers.')
+2020-06-24 12:15:01.885550: Got post request from 127.0.0.1
+2020-06-24 12:15:37.180489: Server started: 2020-06-24 12:15:37.180350
+2020-06-24 12:15:39.202955: Got post request from 127.0.0.1
+2020-06-24 12:15:39.223013: Post request from 127.0.0.1 new task: size=(759, 847)
+2020-06-24 12:15:39.223288: Post request from 127.0.0.1new key: 0
+2020-06-24 12:15:39.294004: Get request from 127.0.0.1: key=0
+2020-06-24 12:15:39.330674: Get request from 127.0.0.1: key=0, imagepath: images/pil_0.jpg, with size: (759, 847)
+2020-06-24 12:15:51.667605: Server started: 2020-06-24 12:15:51.667478
+2020-06-24 12:15:54.123697: Got post request from 127.0.0.1
+2020-06-24 12:15:54.142568: Post request from 127.0.0.1 new task: size=(722, 789)
+2020-06-24 12:15:54.143051: Post request from 127.0.0.1new key: 0
+2020-06-24 12:15:54.208477: Get request from 127.0.0.1: key=0
+2020-06-24 12:15:54.240856: Get request from 127.0.0.1: key=0, imagepath: images/pil_0.jpg, with size: (722, 789)
+2020-06-24 12:16:01.737302: Server started: 2020-06-24 12:16:01.737175
+2020-06-24 12:16:04.076516: Got post request from 127.0.0.1
+2020-06-24 12:16:04.096081: Post request from 127.0.0.1 new task: size=(1075, 889)
+2020-06-24 12:16:04.096404: Post request from 127.0.0.1new key: 0
+2020-06-24 12:16:04.202447: Get request from 127.0.0.1: key=0
+2020-06-24 12:16:04.258585: Get request from 127.0.0.1: key=0, imagepath: images/pil_0.jpg, with size: (1075, 889)
+2020-06-24 15:55:18.151946: Server started: 2020-06-24 15:55:18.151794
+2020-06-24 15:55:38.276269: Got post request from 127.0.0.1
+2020-06-24 15:55:38.335897: Post request from 127.0.0.1 new task: size=(1019, 853)
+2020-06-24 15:55:38.336137: Post request from 127.0.0.1new key: 0
+2020-06-24 15:55:38.400825: Get request from 127.0.0.1: key=0
+2020-06-24 15:55:38.428716: Get request from 127.0.0.1: key=0, imagepath: images/pil_0.jpg, with size: (1019, 853)
+2020-06-24 15:55:54.467966: Server started: 2020-06-24 15:55:54.467851
+2020-06-24 15:55:56.374131: Got post request from 127.0.0.1
+2020-06-24 15:55:56.388603: Post request from 127.0.0.1 new task: size=(685, 534)
+2020-06-24 15:55:56.388942: Post request from 127.0.0.1new key: 0
+2020-06-24 15:55:56.504841: Get request from 127.0.0.1: key=0
+2020-06-24 16:05:46.999913: Server started: 2020-06-24 16:05:46.999802
+2020-06-24 16:05:49.226698: Got post request from 127.0.0.1
+2020-06-24 16:05:49.269569: Post request from 127.0.0.1 new task: size=(1287, 592)
+2020-06-24 16:05:49.269819: Post request from 127.0.0.1new key: 0
+2020-06-24 16:05:49.398954: Get request from 127.0.0.1: key=0
+2020-06-24 16:05:49.722018: Get request from 127.0.0.1: key=0, imagepath: images/pil_0.jpg, with size: (1287, 592)
+2020-06-24 16:05:59.887346: Get request from 127.0.0.1: key=0
+2020-06-24 16:06:00.202833: Get request from 127.0.0.1: key=0, imagepath: images/pil_0.jpg, with size: (1287, 592)
+2020-06-24 16:08:05.895781: Server started: 2020-06-24 16:08:05.895689
+2020-06-24 16:08:08.638059: Got post request from 127.0.0.1
+2020-06-24 16:08:08.672982: Post request from 127.0.0.1 new task: size=(1090, 668)
+2020-06-24 16:08:08.673387: Post request from 127.0.0.1new key: 0
+2020-06-24 16:08:08.780426: Get request from 127.0.0.1: key=0
+2020-06-24 16:08:09.113342: Get request from 127.0.0.1: key=0, imagepath: images/pil_0.png, with size: (1090, 668)
+2020-06-24 16:08:33.161704: Get request from 127.0.0.1: key=0
+2020-06-24 16:08:33.473187: Get request from 127.0.0.1: key=0, imagepath: images/pil_0.png, with size: (1090, 668)
+2020-06-24 16:13:38.771923: Get request from 127.0.0.1: key=1
+2020-06-24 16:14:03.085385: Server started: 2020-06-24 16:14:03.085245
+2020-06-24 16:14:03.746009: Get request from 127.0.0.1: key=1
+2020-06-24 16:14:03.746426: Get request from 127.0.0.1 and key=1 fails: key does not exist
+2020-06-24 16:14:09.661219: Get request from 127.0.0.1: key=-1
+2020-06-24 16:14:09.661459: Get request from 127.0.0.1 and key=-1 fails: key does not exist
+2020-06-24 16:14:15.331430: Got post request from 127.0.0.1
+2020-06-24 16:14:15.393040: Post request from 127.0.0.1 new task: size=(1341, 631)
+2020-06-24 16:14:15.393595: Post request from 127.0.0.1new key: 0
+2020-06-24 16:14:15.515662: Get request from 127.0.0.1: key=0
+2020-06-24 16:14:15.961933: Get request from 127.0.0.1: key=0, imagepath: images/pil_0.png, with size: (1341, 631)
+2020-06-24 16:14:19.253021: Get request from 127.0.0.1: key=0
+2020-06-24 16:14:19.568266: Get request from 127.0.0.1: key=0, imagepath: images/pil_0.png, with size: (1341, 631)
+2020-06-24 16:18:16.060287: Server started: 2020-06-24 16:18:16.060158
+2020-06-24 16:18:18.552641: Got post request from 127.0.0.1
+2020-06-24 16:18:18.595995: Post request from 127.0.0.1 new task: size=(927, 412)
+2020-06-24 16:18:18.596286: Post request from 127.0.0.1new key: 0
+2020-06-24 16:18:18.803371: Get request from 127.0.0.1: key=0
+2020-06-24 16:18:19.049963: Get request from 127.0.0.1: key=0, imagepath: images/pil_0.png, with size: (927, 412)
+2020-06-24 16:18:22.761594: Get request from 127.0.0.1: key=0
+2020-06-24 16:18:22.761889: Get request from 127.0.0.1 and key=0 fails: key does not exist
+2020-06-24 16:18:45.634493: Got post request from 127.0.0.1
+2020-06-24 16:18:45.635312: Post request from 127.0.0.1 new task: size=(1319, 480)
+2020-06-24 16:18:45.635470: Post request from 127.0.0.1new key: 0
+2020-06-24 16:18:46.892090: Get request from 127.0.0.1: key=0
+2020-06-24 16:18:47.258922: Get request from 127.0.0.1: key=0, imagepath: images/pil_0.png, with size: (1319, 480)
+2020-06-24 16:20:07.180100: Get request from 127.0.0.1: key=0
+2020-06-24 16:20:07.180261: Get request from 127.0.0.1 and key=0 fails: key does not exist
+2020-06-24 16:29:44.101691: Server started: 2020-06-24 16:29:44.101537
+2020-06-24 16:29:46.909212: Got post request from 127.0.0.1
+2020-06-24 16:29:46.952436: Post request from 127.0.0.1 new task: size=(1279, 583)
+2020-06-24 16:29:46.952680: Post request from 127.0.0.1new key: 0
+2020-06-24 16:29:53.449191: Get request from 127.0.0.1: key=0
+2020-06-24 16:29:53.449340: Get request from 127.0.0.1: key=0, imagepath: im_server/pil_0.png, with size: (1279, 583)
+2020-06-24 16:29:56.401922: Get request from 127.0.0.1: key=0
+2020-06-24 16:29:56.402194: Get request from 127.0.0.1 and key=0 fails: key does not exist
+2020-06-24 16:31:30.380587: Server started: 2020-06-24 16:31:30.380466
+2020-06-24 16:31:32.661138: Got post request from 127.0.0.1
+2020-06-24 16:31:32.674825: Post request from 127.0.0.1 new task: size=(630, 577)
+2020-06-24 16:31:32.675132: Post request from 127.0.0.1new key: 1
+2020-06-24 16:31:35.619141: Get request from 127.0.0.1: key=0
+2020-06-24 16:31:35.619356: Get request from 127.0.0.1 and key=0 fails: key does not exist
+2020-06-24 16:31:37.480691: Get request from 127.0.0.1: key=1
+2020-06-24 16:31:37.481015: Get request from 127.0.0.1: key=1, imagepath: im_server/pil_1.png, with size: (630, 577)
+2020-06-24 16:31:47.128862: Got post request from 127.0.0.1
+2020-06-24 16:31:47.130241: Post request from 127.0.0.1 new task: size=(993, 850)
+2020-06-24 16:31:47.130437: Post request from 127.0.0.1new key: 11
+2020-06-24 16:31:47.132860: Got post request from 127.0.0.1
+2020-06-24 16:31:47.133796: Post request from 127.0.0.1 new task: size=(1269, 900)
+2020-06-24 16:31:47.133983: Post request from 127.0.0.1new key: 11
+2020-06-24 16:31:47.135439: Got post request from 127.0.0.1
+2020-06-24 16:31:47.136185: Post request from 127.0.0.1 new task: size=(1260, 658)
+2020-06-24 16:31:47.136481: Post request from 127.0.0.1new key: 11
+2020-06-24 16:31:47.138043: Got post request from 127.0.0.1
+2020-06-24 16:31:47.138925: Post request from 127.0.0.1 new task: size=(861, 668)
+2020-06-24 16:31:47.139144: Post request from 127.0.0.1new key: 11
+2020-06-24 16:31:47.860353: Got post request from 127.0.0.1
+2020-06-24 16:31:47.860960: Post request from 127.0.0.1 new task: size=(696, 509)
+2020-06-24 16:31:47.862327: Post request from 127.0.0.1new key: 11
+2020-06-24 16:31:47.863762: Got post request from 127.0.0.1
+2020-06-24 16:31:47.864382: Post request from 127.0.0.1 new task: size=(830, 698)
+2020-06-24 16:31:47.864573: Post request from 127.0.0.1new key: 11
+2020-06-24 16:31:47.866276: Got post request from 127.0.0.1
+2020-06-24 16:31:47.866776: Post request from 127.0.0.1 new task: size=(702, 606)
+2020-06-24 16:31:47.866969: Post request from 127.0.0.1new key: 11
+2020-06-24 16:31:47.869957: Got post request from 127.0.0.1
+2020-06-24 16:31:47.870829: Post request from 127.0.0.1 new task: size=(842, 528)
+2020-06-24 16:31:47.871048: Post request from 127.0.0.1new key: 11
+2020-06-24 16:31:47.872918: Got post request from 127.0.0.1
+2020-06-24 16:31:47.879894: Post request from 127.0.0.1 new task: size=(614, 575)
+2020-06-24 16:31:47.880177: Post request from 127.0.0.1new key: 11
+2020-06-24 16:31:47.881837: Got post request from 127.0.0.1
+2020-06-24 16:31:47.882750: Post request from 127.0.0.1 new task: size=(636, 801)
+2020-06-24 16:31:47.883037: Post request from 127.0.0.1new key: 11
+2020-06-24 16:32:04.178016: Server started: 2020-06-24 16:32:04.177933
+2020-06-24 16:32:06.472103: Got post request from 127.0.0.1
+2020-06-24 16:32:06.495757: Post request from 127.0.0.1 new task: size=(815, 825)
+2020-06-24 16:32:06.496021: Post request from 127.0.0.1new key: 1
+2020-06-24 16:32:06.497722: Got post request from 127.0.0.1
+2020-06-24 16:32:06.498721: Post request from 127.0.0.1 new task: size=(1073, 972)
+2020-06-24 16:32:06.498999: Post request from 127.0.0.1new key: 2
+2020-06-24 16:32:06.752667: Got post request from 127.0.0.1
+2020-06-24 16:32:06.753211: Post request from 127.0.0.1 new task: size=(1007, 996)
+2020-06-24 16:32:06.754277: Post request from 127.0.0.1new key: 3
+2020-06-24 16:32:06.755237: Got post request from 127.0.0.1
+2020-06-24 16:32:06.755612: Post request from 127.0.0.1 new task: size=(1092, 486)
+2020-06-24 16:32:06.755745: Post request from 127.0.0.1new key: 4
+2020-06-24 16:32:06.756777: Got post request from 127.0.0.1
+2020-06-24 16:32:06.757379: Post request from 127.0.0.1 new task: size=(1236, 575)
+2020-06-24 16:32:06.757513: Post request from 127.0.0.1new key: 5
+2020-06-24 16:32:06.758735: Got post request from 127.0.0.1
+2020-06-24 16:32:06.759338: Post request from 127.0.0.1 new task: size=(946, 518)
+2020-06-24 16:32:06.759476: Post request from 127.0.0.1new key: 6
+2020-06-24 16:32:06.760556: Got post request from 127.0.0.1
+2020-06-24 16:32:06.761212: Post request from 127.0.0.1 new task: size=(799, 726)
+2020-06-24 16:32:06.761347: Post request from 127.0.0.1new key: 7
+2020-06-24 16:32:06.762412: Got post request from 127.0.0.1
+2020-06-24 16:32:06.763101: Post request from 127.0.0.1 new task: size=(1326, 750)
+2020-06-24 16:32:06.763258: Post request from 127.0.0.1new key: 8
+2020-06-24 16:32:06.764276: Got post request from 127.0.0.1
+2020-06-24 16:32:06.764923: Post request from 127.0.0.1 new task: size=(608, 863)
+2020-06-24 16:32:06.765059: Post request from 127.0.0.1new key: 9
+2020-06-24 16:32:06.766629: Got post request from 127.0.0.1
+2020-06-24 16:32:06.767409: Post request from 127.0.0.1 new task: size=(959, 844)
+2020-06-24 16:32:06.767584: Post request from 127.0.0.1new key: 10
+2020-06-24 16:32:12.219041: Get request from 127.0.0.1: key=1
+2020-06-24 16:32:12.219278: Get request from 127.0.0.1: key=1, imagepath: im_server/pil_1.png, with size: (815, 825)
+2020-06-24 16:32:14.538171: Get request from 127.0.0.1: key=23
+2020-06-24 16:32:14.538395: Get request from 127.0.0.1 and key=23 fails: key does not exist
+2020-06-24 16:32:17.232123: Get request from 127.0.0.1: key=2
+2020-06-24 16:32:17.232323: Get request from 127.0.0.1: key=2, imagepath: im_server/pil_2.png, with size: (1073, 972)
+2020-06-24 16:32:19.535847: Get request from 127.0.0.1: key=3
+2020-06-24 16:32:19.536037: Get request from 127.0.0.1: key=3, imagepath: im_server/pil_3.png, with size: (1007, 996)
+2020-06-24 16:32:21.241084: Get request from 127.0.0.1: key=3
+2020-06-24 16:32:21.241561: Get request from 127.0.0.1 and key=3 fails: key does not exist
+2020-06-24 16:32:24.815964: Get request from 127.0.0.1: key=4
+2020-06-24 16:32:24.816140: Get request from 127.0.0.1: key=4, imagepath: im_server/pil_4.png, with size: (1092, 486)
+2020-06-24 16:32:29.329733: Get request from 127.0.0.1: key=5
+2020-06-24 16:32:29.329973: Get request from 127.0.0.1: key=5, imagepath: im_server/pil_5.png, with size: (1236, 575)
+2020-06-24 16:32:31.424547: Get request from 127.0.0.1: key=6
+2020-06-24 16:32:31.424951: Get request from 127.0.0.1: key=6, imagepath: im_server/pil_6.png, with size: (946, 518)
+2020-06-24 16:32:49.247018: Got post request from 127.0.0.1
+2020-06-24 16:32:49.247933: Post request from 127.0.0.1 new task: size=(1166, 744)
+2020-06-24 16:32:49.248141: Post request from 127.0.0.1new key: 11
+2020-06-24 16:32:49.404727: Got post request from 127.0.0.1
+2020-06-24 16:32:49.405440: Post request from 127.0.0.1 new task: size=(777, 543)
+2020-06-24 16:32:49.405653: Post request from 127.0.0.1new key: 12
+2020-06-24 16:32:49.407196: Got post request from 127.0.0.1
+2020-06-24 16:32:49.408105: Post request from 127.0.0.1 new task: size=(1132, 517)
+2020-06-24 16:32:49.408310: Post request from 127.0.0.1new key: 13
+2020-06-24 16:32:49.691220: Got post request from 127.0.0.1
+2020-06-24 16:32:49.691968: Post request from 127.0.0.1 new task: size=(1161, 848)
+2020-06-24 16:32:49.692913: Post request from 127.0.0.1new key: 14
+2020-06-24 16:32:49.694216: Got post request from 127.0.0.1
+2020-06-24 16:32:49.694640: Post request from 127.0.0.1 new task: size=(732, 746)
+2020-06-24 16:32:49.694784: Post request from 127.0.0.1new key: 15
+2020-06-24 16:32:49.695781: Got post request from 127.0.0.1
+2020-06-24 16:32:49.696432: Post request from 127.0.0.1 new task: size=(1241, 405)
+2020-06-24 16:32:49.696586: Post request from 127.0.0.1new key: 16
+2020-06-24 16:32:49.697553: Got post request from 127.0.0.1
+2020-06-24 16:32:49.698175: Post request from 127.0.0.1 new task: size=(610, 976)
+2020-06-24 16:32:49.698327: Post request from 127.0.0.1new key: 17
+2020-06-24 16:32:49.699308: Got post request from 127.0.0.1
+2020-06-24 16:32:49.699944: Post request from 127.0.0.1 new task: size=(1356, 939)
+2020-06-24 16:32:49.700101: Post request from 127.0.0.1new key: 18
+2020-06-24 16:32:49.701072: Got post request from 127.0.0.1
+2020-06-24 16:32:49.701677: Post request from 127.0.0.1 new task: size=(1006, 753)
+2020-06-24 16:32:49.701817: Post request from 127.0.0.1new key: 19
+2020-06-24 16:32:49.703112: Got post request from 127.0.0.1
+2020-06-24 16:32:49.703824: Post request from 127.0.0.1 new task: size=(1350, 480)
+2020-06-24 16:32:49.704018: Post request from 127.0.0.1new key: 20
+2020-06-24 16:32:50.682232: Get request from 127.0.0.1: key=11
+2020-06-24 16:32:50.683845: Get request from 127.0.0.1: key=11, imagepath: im_server/pil_11.png, with size: (1166, 744)
+2020-06-24 16:32:51.127820: Get request from 127.0.0.1: key=12
+2020-06-24 16:32:51.128061: Get request from 127.0.0.1: key=12, imagepath: im_server/pil_12.png, with size: (777, 543)
+2020-06-24 16:32:51.430938: Get request from 127.0.0.1: key=13
+2020-06-24 16:32:51.431098: Get request from 127.0.0.1: key=13, imagepath: im_server/pil_13.png, with size: (1132, 517)
+2020-06-24 16:32:51.696955: Get request from 127.0.0.1: key=14
+2020-06-24 16:32:51.697097: Get request from 127.0.0.1: key=14, imagepath: im_server/pil_14.png, with size: (1161, 848)
+2020-06-24 16:32:52.135655: Get request from 127.0.0.1: key=15
+2020-06-24 16:32:52.135828: Get request from 127.0.0.1: key=15, imagepath: im_server/pil_15.png, with size: (732, 746)
+2020-06-24 16:32:52.461583: Get request from 127.0.0.1: key=16
+2020-06-24 16:32:52.461862: Get request from 127.0.0.1: key=16, imagepath: im_server/pil_16.png, with size: (1241, 405)
+2020-06-24 16:32:52.665134: Get request from 127.0.0.1: key=17
+2020-06-24 16:32:52.665288: Get request from 127.0.0.1: key=17, imagepath: im_server/pil_17.png, with size: (610, 976)
+2020-06-24 16:32:52.970452: Get request from 127.0.0.1: key=18
+2020-06-24 16:32:52.970671: Get request from 127.0.0.1: key=18, imagepath: im_server/pil_18.png, with size: (1356, 939)
+2020-06-24 16:32:53.516632: Get request from 127.0.0.1: key=19
+2020-06-24 16:32:53.516798: Get request from 127.0.0.1: key=19, imagepath: im_server/pil_19.png, with size: (1006, 753)
+2020-06-24 16:32:53.869980: Get request from 127.0.0.1: key=20
+2020-06-24 16:32:53.870108: Get request from 127.0.0.1: key=20, imagepath: im_server/pil_20.png, with size: (1350, 480)
+2020-06-24 16:34:39.117711: Got post request from 127.0.0.1
+2020-06-24 16:34:39.119070: Post request from 127.0.0.1 new task: size=(1253, 622)
+2020-06-24 16:34:39.119312: Post request from 127.0.0.1new key: 21
+2020-06-24 16:34:39.286646: Got post request from 127.0.0.1
+2020-06-24 16:34:39.287263: Post request from 127.0.0.1 new task: size=(751, 517)
+2020-06-24 16:34:39.288315: Post request from 127.0.0.1new key: 22
+2020-06-24 16:34:39.289872: Got post request from 127.0.0.1
+2020-06-24 16:34:39.290708: Post request from 127.0.0.1 new task: size=(1146, 470)
+2020-06-24 16:34:39.290902: Post request from 127.0.0.1new key: 23
+2020-06-24 16:34:39.292454: Got post request from 127.0.0.1
+2020-06-24 16:34:39.293234: Post request from 127.0.0.1 new task: size=(611, 809)
+2020-06-24 16:34:39.293454: Post request from 127.0.0.1new key: 24
+2020-06-24 16:34:39.697672: Got post request from 127.0.0.1
+2020-06-24 16:34:39.698176: Post request from 127.0.0.1 new task: size=(1001, 954)
+2020-06-24 16:34:39.699295: Post request from 127.0.0.1new key: 25
+2020-06-24 16:34:39.700389: Got post request from 127.0.0.1
+2020-06-24 16:34:39.700776: Post request from 127.0.0.1 new task: size=(962, 605)
+2020-06-24 16:34:39.700916: Post request from 127.0.0.1new key: 26
+2020-06-24 16:34:39.702091: Got post request from 127.0.0.1
+2020-06-24 16:34:39.702558: Post request from 127.0.0.1 new task: size=(1052, 409)
+2020-06-24 16:34:39.702714: Post request from 127.0.0.1new key: 27
+2020-06-24 16:34:39.704118: Got post request from 127.0.0.1
+2020-06-24 16:34:39.704997: Post request from 127.0.0.1 new task: size=(1334, 681)
+2020-06-24 16:34:39.705197: Post request from 127.0.0.1new key: 28
+2020-06-24 16:34:39.706582: Got post request from 127.0.0.1
+2020-06-24 16:34:39.707423: Post request from 127.0.0.1 new task: size=(1012, 869)
+2020-06-24 16:34:39.707603: Post request from 127.0.0.1new key: 29
+2020-06-24 16:34:39.708731: Got post request from 127.0.0.1
+2020-06-24 16:34:39.709777: Post request from 127.0.0.1 new task: size=(959, 572)
+2020-06-24 16:34:39.710027: Post request from 127.0.0.1new key: 30
+2020-06-24 16:34:40.500624: Get request from 127.0.0.1: key=21
+2020-06-24 16:34:40.501530: Get request from 127.0.0.1: key=21, imagepath: im_server/pil_21.png, with size: (1253, 622)
+2020-06-24 16:34:40.900306: Get request from 127.0.0.1: key=22
+2020-06-24 16:34:40.900610: Get request from 127.0.0.1: key=22, imagepath: im_server/pil_22.png, with size: (751, 517)
+2020-06-24 16:34:41.137313: Get request from 127.0.0.1: key=23
+2020-06-24 16:34:41.137473: Get request from 127.0.0.1: key=23, imagepath: im_server/pil_23.png, with size: (1146, 470)
+2020-06-24 16:34:41.374542: Get request from 127.0.0.1: key=24
+2020-06-24 16:34:41.374726: Get request from 127.0.0.1: key=24, imagepath: im_server/pil_24.png, with size: (611, 809)
+2020-06-24 16:34:41.665410: Get request from 127.0.0.1: key=25
+2020-06-24 16:34:41.665821: Get request from 127.0.0.1: key=25, imagepath: im_server/pil_25.png, with size: (1001, 954)
+2020-06-24 16:34:42.100252: Get request from 127.0.0.1: key=26
+2020-06-24 16:34:42.100415: Get request from 127.0.0.1: key=26, imagepath: im_server/pil_26.png, with size: (962, 605)
+2020-06-24 16:34:42.396106: Get request from 127.0.0.1: key=27
+2020-06-24 16:34:42.396285: Get request from 127.0.0.1: key=27, imagepath: im_server/pil_27.png, with size: (1052, 409)
+2020-06-24 16:34:42.607407: Get request from 127.0.0.1: key=28
+2020-06-24 16:34:42.607583: Get request from 127.0.0.1: key=28, imagepath: im_server/pil_28.png, with size: (1334, 681)
+2020-06-24 16:34:42.993720: Get request from 127.0.0.1: key=29
+2020-06-24 16:34:42.993888: Get request from 127.0.0.1: key=29, imagepath: im_server/pil_29.png, with size: (1012, 869)
+2020-06-24 16:34:43.404149: Get request from 127.0.0.1: key=30
+2020-06-24 16:34:43.404329: Get request from 127.0.0.1: key=30, imagepath: im_server/pil_30.png, with size: (959, 572)

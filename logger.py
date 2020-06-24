@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from datetime import datetime
 
 
 class AbstractLogger(ABC):
@@ -13,4 +14,4 @@ class FileLogger(AbstractLogger):
     
     def log(self, msg):
         with open(self.filename, 'a') as log:
-            log.write(f'{msg}\n')
+            log.write(f'{datetime.now()}: {msg}\n')

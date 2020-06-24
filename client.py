@@ -17,15 +17,19 @@ async def post_img(url):
     async with aiohttp.ClientSession() as session:
         height, width = randint(400, 1000), randint(600, 1400)
         data = {
-            'img': open('im_client/jpeg.jpg', 'rb'),
-            'height': str(-1),
+            'img': open('im_client/png.png', 'rb'),
+            'height': str(height),
             'width': str(width),
         }
         resp  = await session.post(url, data=data)
+        # if resp.content_type == ''
         print(f'Response status is {resp.status}')
         data = json.loads(await resp.text())
-        print('Image sent. Image key is {}. New size is: {}'.format(data['key'], (width, height)))
-        keys.append(data['key'])
+        if resp.status == 200:
+            print('Image sent. Image key is {}. New size is: {}'.format(data['key'], (width, height)))
+            keys.append(data['key'])
+        else:
+            print('Something wrong: {}'.format(data))
 
 async def get_img(url):
     global current_key
@@ -39,9 +43,10 @@ async def get_img(url):
         if resp.content_type == 'application/json':
             data = json.loads(await resp.text())
             print('Image with key[{}] is {}'.format(data['key'], data['status']))
-        elif resp.content_type == 'image/jpeg':
+        elif resp.content_type in ['image/jpeg', 'image/png']:
             image = Image.open(BytesIO(await resp.read()))
-            image.save(f'im_client/pil_{key}.jpg')
+            extension = 'jpg' if resp.content_type == 'image/jpeg' else 'png'
+            image.save('im_client/pil_{}.{}'.format(key, extension))
             print(f'Image pil_{key}.jpg saved with size: {image.size}')
         else:
             print(f'Unknown content-type: {resp.content_type}')
@@ -57,7 +62,7 @@ async def many_runs(n):
 
 if __name__ == '__main__':
     t = perf_counter()
-    asyncio.run(many_runs(1))
+    asyncio.run(many_runs(10))
     # asyncio.run(one_run())
     total = perf_counter() - t
     print(f'Total time taken: {total} seconds')
