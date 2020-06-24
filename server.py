@@ -2,11 +2,11 @@ from aiohttp import web
 import asyncio
 from PIL import Image, UnidentifiedImageError
 from io import BytesIO
-from pathlib import Path
 import mimetypes
+import aiohttp_jinja2
+import jinja2
 from datetime import datetime
-from time import time
-import os
+from aiohttp_jinja2 import template
 
 from logger import FileLogger
 
@@ -44,17 +44,20 @@ class ImageResizer:
             raise RuntimeError(f'can\'t get image.')
         return image, file_extension, width, height
     
+    @template('main.html')
     async def post_view(self, request):
+        if request.method == 'GET':
+            return {}
         try:
             image, extension, width, height = await self.receive_data(request)
         except RuntimeError as e:
             message = f'Request from {request.remote} fails: {repr(e)}'
             self.logger.log(message)
-            return web.json_response({'status': 'denied', 'errror': message}, status=400)
+            return {'status': 'denied', 'errror': message}
         except Exception as e:
             message = f'Request from {request.remote} fails: {repr(e)}'
             self.logger.log(message)
-            return web.json_response({'status': 'denied', 'error': 'Server got error. Please try again.'}, status=400)
+            return {'status': 'denied', 'error': 'Server got error. Please try again.'}
 
         self.logger.log('Post request from {} new task: size={}'.format(request.remote, (width, height)))
         
@@ -65,17 +68,19 @@ class ImageResizer:
             extension
         )
         self.logger.log(f'Post request from {request.remote}new key: {key}')
-        return web.json_response({'status': 'ok', 'key': key})
+        return {'status': 'ok', 'key': key}
     
+    @template('get_image.html')
     async def get_view(self, request):
-        key = request.rel_url.query.get('key', '')
+        key = request.match_info.get('key', '')
         self.logger.log(f'Get request from {request.remote}: key={key}')
         try:
             key = int(key)
             task, file_extension = self.tasks[key]
         except (ValueError, KeyError):
             self.logger.log(f'Get request from {request.remote} and key={key} fails: key does not exist')
-            return web.json_response({'status': 'denied', 'error': 'key does not exist'}, status=404)
+            return {'status': 'denied', 'error': 'key does not exist'}
+
         if task.done():
             image = await task
             filename = 'im_server/pil_{}.{}'.format(key, file_extension)
@@ -83,8 +88,6 @@ class ImageResizer:
             image.save(filename)
             resp = web.FileResponse(filename)
             del self.tasks[key]
-            # await resp.prepare(request)
-            # os.remove(f'im_server/pil_{key}.jpg')
         else:
             self.logger.log(f'Get request from {request.remote}: key={key}, image in process')
             resp = web.json_response({'key': key, 'status': 'in process'})
@@ -94,10 +97,15 @@ class ImageResizer:
 
 async def initialization():
     app = web.Application()
+    aiohttp_jinja2.setup(
+        app,
+        loader=jinja2.FileSystemLoader('templates')
+    )
     resizer = ImageResizer()
     app.add_routes([
+        web.get('/resize', resizer.post_view),
         web.post('/resize', resizer.post_view),
-        web.get('/get_img', resizer.get_view),
+        web.get('/get_img/{key}', resizer.get_view),
     ])
     return app
 

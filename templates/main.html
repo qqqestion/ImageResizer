@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resize your image</title>
+</head>
+<body>
+    <h1>Image resizer</h1>
+    <form action="" method="post" accept-charset="utf-8"
+        enctype="multipart/form-data">
+
+        <label for="img">Image</label>
+        <input id="img" name="img" type="file" value=""/>
+        <br>
+        <label for="height">Height</label>
+        <input id="height" name="height" type="integer" value=""/>
+        <label for="width">Width</label>
+        <input id="width" name="width" type="integer" value=""/>
+        <br>
+
+        <input type="submit" value="submit"/>
+    </form>
+    {% if key %}
+        <h2>Your key is {{ key }}</h2>
+    {% endif %}
+    {% if error %}
+        <h2>While processing your request we got error: {{ error }}</h2>
+    {% endif %}
+
+</body>
+</html>

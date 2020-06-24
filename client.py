@@ -62,7 +62,6 @@ async def many_runs(n):
 
 if __name__ == '__main__':
     t = perf_counter()
-    asyncio.run(many_runs(10))
-    # asyncio.run(one_run())
+    asyncio.run(many_runs(1))
     total = perf_counter() - t
     print(f'Total time taken: {total} seconds')
