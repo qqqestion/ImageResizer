@@ -107,6 +107,7 @@ async def initialization():
         web.post('/resize', resizer.upload_image),
         web.get('/get_img/{key}', resizer.get_image),
     ])
+
     return app
 
 web.run_app(initialization())
